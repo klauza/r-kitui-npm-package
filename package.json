@@ -1,10 +1,11 @@
 {
-  "name": "kitui",
+  "name": "react-kitui",
   "version": "1.0.0",
   "description": "An npm package with react UI elements",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/klauza/kitui/issues"
   },
-  "homepage": "https://github.com/klauza/kitui#readme"
+  "homepage": "https://github.com/klauza/kitui#readme",
+  "devDependencies": {
+    "typescript": "^3.7.2"
+  }
 }
