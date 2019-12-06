@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/r-kitui/static/css/main.795991f2.chunk.css",
+    "main.js": "/r-kitui/static/js/main.ae5e5d80.chunk.js",
+    "main.js.map": "/r-kitui/static/js/main.ae5e5d80.chunk.js.map",
+    "runtime-main.js": "/r-kitui/static/js/runtime-main.a5e33e43.js",
+    "runtime-main.js.map": "/r-kitui/static/js/runtime-main.a5e33e43.js.map",
+    "static/js/2.a3bf9b67.chunk.js": "/r-kitui/static/js/2.a3bf9b67.chunk.js",
+    "static/js/2.a3bf9b67.chunk.js.map": "/r-kitui/static/js/2.a3bf9b67.chunk.js.map",
+    "index.html": "/r-kitui/index.html",
+    "precache-manifest.146dc13fa0330f5673e67ee1ea96953d.js": "/r-kitui/precache-manifest.146dc13fa0330f5673e67ee1ea96953d.js",
+    "service-worker.js": "/r-kitui/service-worker.js",
+    "static/css/main.795991f2.chunk.css.map": "/r-kitui/static/css/main.795991f2.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a5e33e43.js",
+    "static/js/2.a3bf9b67.chunk.js",
+    "static/css/main.795991f2.chunk.css",
+    "static/js/main.ae5e5d80.chunk.js"
+  ]
+}
