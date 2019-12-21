@@ -1,10 +1,45 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
+const Wrapper = styled.div`
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  user-select: none;
+  padding: 0 2.5px;
+  @media(max-width: 768px){
+    overflow-x: scroll;
+    overflow-y  : hidden;
+  }
+
+  nav{
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+  }
+`;
 
 const Navbar = () => {
   return (
-    <div>
-      In order to use that package, you need to install styled-components, best from <a href="https://www.npmjs.com/package/styled-components" >here</a> or 
-    </div>
+    <Wrapper>
+      <nav>
+        <Link to='/'> Main </Link>
+        <Link to='/docs'> Documentation </Link>
+        <Link to='/examples'> Examples </Link>
+        <Link to='/projects'> Projects </Link>
+        <Link to='/projects'> Projects </Link>
+        <Link to='/projects'> Projects </Link>
+        <Link to='/projects'> Projects </Link>
+        <Link to='/projects'> Projects </Link>
+      </nav>
+      <div>
+      FB - NPM 
+      </div>
+    </Wrapper>
   )
 }
 
