@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import styled from 'styled-components';
+import Hero from './Hero';
 import { TestComponent, JustButton, NormalButton, NormalButtonWithProps } from './reactComponentLib';
 
 const TheBtn = styled(NormalButton)`
@@ -10,6 +11,7 @@ const TheBtn = styled(NormalButton)`
 const Documentation = () => {
   return (
     <Fragment>
+      <Hero />
       <TestComponent text="Styled Component from React library" />
       <TheBtn text="btn"/>
       <JustButton width="200px" />

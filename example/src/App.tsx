@@ -1,27 +1,28 @@
 import React, { Component } from 'react';
-import { HashRouter, Route } from 'react-router-dom';
-import styled from 'styled-components';
-import Navbar from './Navbar';
-import Hero from './Hero';
-import Documentation from './Documentation';
-import Home from './Home';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 
-const Content = styled.div`
-  width: 100%;
-  height: 100%;
-`;
+import Navbar from './Navbar';
+import Home from './Home';
+import Documentation from './Documentation';
+import { PageNotFound } from './reactComponentLib';
+
+
 
 class App extends Component {
+
+
   render() {
+
+    const NotFound = () => (<PageNotFound style={{marginTop:"50px"}} text="Page not found" />);
+
     return (
       <HashRouter basename='/'>
-        <Content>
-          <Navbar />
-          <Hero />
-
+      <Navbar />
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/docs" component={Documentation} />
-        </Content>
+          <Route component={NotFound} />
+        </Switch>
       </HashRouter>
     );
   }
