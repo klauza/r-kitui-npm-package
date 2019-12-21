@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import Navbar from './Navbar';
+import Hero from './Hero';
 import Documentation from './Documentation';
 import Home from './Home';
 
@@ -16,6 +17,7 @@ class App extends Component {
       <HashRouter basename='/'>
         <Content>
           <Navbar />
+          <Hero />
 
           <Route exact path="/" component={Home} />
           <Route path="/docs" component={Documentation} />
