@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const HeroContainer = styled.div`
   padding: 100px 0;
-  margin: 0 auto;
+  margin: 36px 0 auto;
   width: 100%;
   text-align: center;
   background-color: #fff;

@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import NpmImage from './media/npm.png';
 
 const Wrapper = styled.div`
+  z-index: 99;
+  position: fixed;
+  top: 0;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -13,6 +16,7 @@ const Wrapper = styled.div`
   user-select: none;
   padding: 0px 12.5px;
   background: #33b0d6;
+  border-bottom: 1px solid white;
   @media(max-width: 768px){
     overflow-x: scroll;
     overflow-y  : hidden;
