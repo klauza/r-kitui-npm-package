@@ -8,6 +8,9 @@ import Documentation from './components/Documentation';
 import Examples from './components/Examples';
 // doc pages
 import Buttons from './components/DocPages/Buttons';
+import Carousels from './components/DocPages/Carousels';
+import NotFounds from './components/DocPages/NotFounds';
+
 import { PageNotFound } from './reactComponentLib';
 
 
@@ -26,6 +29,8 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/docs" component={Documentation} />
           <Route exact path="/docs/buttons" component={Buttons} />
+          <Route exact path="/docs/carousels" component={Carousels} />
+          <Route exact path="/docs/not-founds" component={NotFounds} />
           <Route exact path="/examples" component={Examples} />
           
           <Route component={NotFound} />
