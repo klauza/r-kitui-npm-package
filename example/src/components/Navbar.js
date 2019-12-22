@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import NpmImage from './media/npm.png';
+import NpmImage from '../media/npm.png';
 
 const Wrapper = styled.div`
   z-index: 99;

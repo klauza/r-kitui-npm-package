@@ -1,7 +1,7 @@
 import React, {Fragment, useState} from 'react';
 import styled from 'styled-components';
 import Hero from './Hero';
-import { TestComponent, JustButton, NormalButton, NormalButtonWithProps } from './reactComponentLib';
+import { TestComponent, JustButton, NormalButton, NormalButtonWithProps } from '../reactComponentLib';
 
 const TheBtn = styled(NormalButton)`
   color: orange;
@@ -56,9 +56,6 @@ const Documentation = () => {
     if(targ === lastOpen) return
 
     setIsOpen(prevState => ({...prevState, [targ]: true, [lastOpen]: false }) );
-
-    // open
-    // setIsOpen(prevState => ({...prevState, [targ]: true }) );
 
     setLastOpen(targ);
   }

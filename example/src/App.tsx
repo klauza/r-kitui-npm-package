@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 
-import Navbar from './Navbar';
-import Footer from './Footer';
-import Home from './Home';
-import Documentation from './Documentation';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Documentation from './components/Documentation';
 
 import { PageNotFound } from './reactComponentLib';
 
