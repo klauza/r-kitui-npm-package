@@ -5,7 +5,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import Documentation from './components/Documentation';
-
+import Examples from './components/Examples';
+// doc pages
+import Buttons from './components/DocPages/Buttons';
 import { PageNotFound } from './reactComponentLib';
 
 
@@ -22,7 +24,10 @@ class App extends Component {
       <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/docs" component={Documentation} />
+          <Route exact path="/docs" component={Documentation} />
+          <Route exact path="/docs/buttons" component={Buttons} />
+          <Route exact path="/examples" component={Examples} />
+          
           <Route component={NotFound} />
         </Switch>
       <Footer />
