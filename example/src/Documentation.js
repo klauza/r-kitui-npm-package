@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import styled from 'styled-components';
 import Hero from './Hero';
 import { TestComponent, JustButton, NormalButton, NormalButtonWithProps } from './reactComponentLib';
@@ -26,7 +26,14 @@ const LeftPanel = styled.div`
       &:hover{
         color: black;
         background: #fff;
+        cursor: pointer;
       }
+    }
+  }
+  div{
+    cursor: pointer;
+    &:hover{
+      color: grey;
     }
   }
 `;
@@ -35,21 +42,73 @@ const MainContent = styled.div`
 `;
 
 const Documentation = () => {
+
+  const [isOpen, setIsOpen] = useState({
+      buttons: false, 
+      carousels: false, 
+      not_founds: false
+  });
+  const [lastOpen, setLastOpen] = useState('');
+
+  const handleOpen = (e) => {
+    const targ = e.target.dataset.open;
+
+    if(targ === lastOpen) return
+
+    setIsOpen(prevState => ({...prevState, [targ]: true, [lastOpen]: false }) );
+
+    // open
+    // setIsOpen(prevState => ({...prevState, [targ]: true }) );
+
+    setLastOpen(targ);
+  }
+
   return (
     <Fragment>
       <Hero />
       <Wrapper>
         <LeftPanel>
           <ul>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
+            <div data-open="buttons" onClick={handleOpen}>Buttons</div>
+            {isOpen.buttons 
+              ? 
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+              :
+              (null)
+            }
+            <div data-open="carousels" onClick={handleOpen}>Carousels</div>
+            {isOpen.carousels 
+              ? 
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+              :
+              (null)
+            }
+            <div data-open="not_founds" onClick={handleOpen}>Not_Founds</div>
+            {isOpen.not_founds 
+              ? 
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+              :
+              (null)
+            }
+
           </ul>
         </LeftPanel>
         <MainContent>
+          <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dignissimos, accusantium quas tempore at sit illum hic voluptas quod beatae est ducimus fugit modi sunt illo quaerat impedit in pariatur! Tempore neque ad quasi qui delectus ullam quibusdam dolor error minima ipsam voluptatibus magni vitae recusandae fuga quis quaerat eum cumque laborum veritatis ab a repudiandae, molestias quidem. Temporibus animi ipsam quod harum cum sint, impedit aliquam rem commodi nam aut officia repudiandae alias dolorum laboriosam saepe error expedita tenetur nulla! Sapiente, tenetur! Explicabo ex sint magnam saepe corporis laboriosam doloremque vitae placeat, consequuntur quos unde hic dicta, sit sapiente fugit, nam distinctio nobis. Cupiditate nobis cum labore aliquam quae laborum reiciendis libero earum error hic nesciunt debitis iusto, voluptas perspiciatis obcaecati atque ipsum consequuntur soluta similique, quis voluptatibus quibusdam! Asperiores, fuga. Architecto illum asperiores quibusdam pariatur est, ipsa, obcaecati dolorem soluta incidunt temporibus ea ex? Veritatis minus vel consectetur totam, nam iusto? Praesentium expedita exercitationem saepe corrupti temporibus excepturi earum. Commodi iste quasi aut, nisi perspiciatis earum delectus blanditiis numquam tempore voluptatem praesentium tenetur sint, laudantium, illo minima tempora in dolor omnis doloremque voluptate. Enim libero provident fugit minima quasi voluptatem voluptatum officia assumenda dolorem accusamus! Repudiandae, fugit deserunt.</div>
+          <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dignissimos, accusantium quas tempore at sit illum hic voluptas quod beatae est ducimus fugit modi sunt illo quaerat impedit in pariatur! Tempore neque ad quasi qui delectus ullam quibusdam dolor error minima ipsam voluptatibus magni vitae recusandae fuga quis quaerat eum cumque laborum veritatis ab a repudiandae, molestias quidem. Temporibus animi ipsam quod harum cum sint, impedit aliquam rem commodi nam aut officia repudiandae alias dolorum laboriosam saepe error expedita tenetur nulla! Sapiente, tenetur! Explicabo ex sint magnam saepe corporis laboriosam doloremque vitae placeat, consequuntur quos unde hic dicta, sit sapiente fugit, nam distinctio nobis. Cupiditate nobis cum labore aliquam quae laborum reiciendis libero earum error hic nesciunt debitis iusto, voluptas perspiciatis obcaecati atque ipsum consequuntur soluta similique, quis voluptatibus quibusdam! Asperiores, fuga. Architecto illum asperiores quibusdam pariatur est, ipsa, obcaecati dolorem soluta incidunt temporibus ea ex? Veritatis minus vel consectetur totam, nam iusto? Praesentium expedita exercitationem saepe corrupti temporibus excepturi earum. Commodi iste quasi aut, nisi perspiciatis earum delectus blanditiis numquam tempore voluptatem praesentium tenetur sint, laudantium, illo minima tempora in dolor omnis doloremque voluptate. Enim libero provident fugit minima quasi voluptatem voluptatum officia assumenda dolorem accusamus! Repudiandae, fugit deserunt.</div>
+          <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dignissimos, accusantium quas tempore at sit illum hic voluptas quod beatae est ducimus fugit modi sunt illo quaerat impedit in pariatur! Tempore neque ad quasi qui delectus ullam quibusdam dolor error minima ipsam voluptatibus magni vitae recusandae fuga quis quaerat eum cumque laborum veritatis ab a repudiandae, molestias quidem. Temporibus animi ipsam quod harum cum sint, impedit aliquam rem commodi nam aut officia repudiandae alias dolorum laboriosam saepe error expedita tenetur nulla! Sapiente, tenetur! Explicabo ex sint magnam saepe corporis laboriosam doloremque vitae placeat, consequuntur quos unde hic dicta, sit sapiente fugit, nam distinctio nobis. Cupiditate nobis cum labore aliquam quae laborum reiciendis libero earum error hic nesciunt debitis iusto, voluptas perspiciatis obcaecati atque ipsum consequuntur soluta similique, quis voluptatibus quibusdam! Asperiores, fuga. Architecto illum asperiores quibusdam pariatur est, ipsa, obcaecati dolorem soluta incidunt temporibus ea ex? Veritatis minus vel consectetur totam, nam iusto? Praesentium expedita exercitationem saepe corrupti temporibus excepturi earum. Commodi iste quasi aut, nisi perspiciatis earum delectus blanditiis numquam tempore voluptatem praesentium tenetur sint, laudantium, illo minima tempora in dolor omnis doloremque voluptate. Enim libero provident fugit minima quasi voluptatem voluptatum officia assumenda dolorem accusamus! Repudiandae, fugit deserunt.</div>
           <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur dignissimos, accusantium quas tempore at sit illum hic voluptas quod beatae est ducimus fugit modi sunt illo quaerat impedit in pariatur! Tempore neque ad quasi qui delectus ullam quibusdam dolor error minima ipsam voluptatibus magni vitae recusandae fuga quis quaerat eum cumque laborum veritatis ab a repudiandae, molestias quidem. Temporibus animi ipsam quod harum cum sint, impedit aliquam rem commodi nam aut officia repudiandae alias dolorum laboriosam saepe error expedita tenetur nulla! Sapiente, tenetur! Explicabo ex sint magnam saepe corporis laboriosam doloremque vitae placeat, consequuntur quos unde hic dicta, sit sapiente fugit, nam distinctio nobis. Cupiditate nobis cum labore aliquam quae laborum reiciendis libero earum error hic nesciunt debitis iusto, voluptas perspiciatis obcaecati atque ipsum consequuntur soluta similique, quis voluptatibus quibusdam! Asperiores, fuga. Architecto illum asperiores quibusdam pariatur est, ipsa, obcaecati dolorem soluta incidunt temporibus ea ex? Veritatis minus vel consectetur totam, nam iusto? Praesentium expedita exercitationem saepe corrupti temporibus excepturi earum. Commodi iste quasi aut, nisi perspiciatis earum delectus blanditiis numquam tempore voluptatem praesentium tenetur sint, laudantium, illo minima tempora in dolor omnis doloremque voluptate. Enim libero provident fugit minima quasi voluptatem voluptatum officia assumenda dolorem accusamus! Repudiandae, fugit deserunt.</div>
           <TestComponent text="Styled Component from React library" />
           <TheBtn text="btn"/>
