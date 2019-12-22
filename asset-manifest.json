@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/r-kitui/static/css/main.9b641537.chunk.css",
-    "main.js": "/r-kitui/static/js/main.82604e45.chunk.js",
-    "main.js.map": "/r-kitui/static/js/main.82604e45.chunk.js.map",
+    "main.css": "/r-kitui/static/css/main.ba7ea437.chunk.css",
+    "main.js": "/r-kitui/static/js/main.c22ce60e.chunk.js",
+    "main.js.map": "/r-kitui/static/js/main.c22ce60e.chunk.js.map",
     "runtime-main.js": "/r-kitui/static/js/runtime-main.331e8d5d.js",
     "runtime-main.js.map": "/r-kitui/static/js/runtime-main.331e8d5d.js.map",
-    "static/js/2.23830bc3.chunk.js": "/r-kitui/static/js/2.23830bc3.chunk.js",
-    "static/js/2.23830bc3.chunk.js.map": "/r-kitui/static/js/2.23830bc3.chunk.js.map",
+    "static/js/2.c564d555.chunk.js": "/r-kitui/static/js/2.c564d555.chunk.js",
+    "static/js/2.c564d555.chunk.js.map": "/r-kitui/static/js/2.c564d555.chunk.js.map",
     "index.html": "/r-kitui/index.html",
-    "precache-manifest.fad4505d02ccfc6c8a54ae5737a066a8.js": "/r-kitui/precache-manifest.fad4505d02ccfc6c8a54ae5737a066a8.js",
+    "precache-manifest.b75b98a72f21126d25f0617efa96922e.js": "/r-kitui/precache-manifest.b75b98a72f21126d25f0617efa96922e.js",
     "service-worker.js": "/r-kitui/service-worker.js",
-    "static/css/main.9b641537.chunk.css.map": "/r-kitui/static/css/main.9b641537.chunk.css.map",
-    "static/js/2.23830bc3.chunk.js.LICENSE": "/r-kitui/static/js/2.23830bc3.chunk.js.LICENSE"
+    "static/css/main.ba7ea437.chunk.css.map": "/r-kitui/static/css/main.ba7ea437.chunk.css.map",
+    "static/js/2.c564d555.chunk.js.LICENSE": "/r-kitui/static/js/2.c564d555.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.331e8d5d.js",
-    "static/js/2.23830bc3.chunk.js",
-    "static/css/main.9b641537.chunk.css",
-    "static/js/main.82604e45.chunk.js"
+    "static/js/2.c564d555.chunk.js",
+    "static/css/main.ba7ea437.chunk.css",
+    "static/js/main.c22ce60e.chunk.js"
   ]
 }
