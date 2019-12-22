@@ -13,22 +13,18 @@ const MainContent = styled.div`
   width: auto;
 `;
 
-const Documentation = () => {
+const Documentation = (props) => {
+
+  const {active} = props;
 
   return (
     <Fragment>
       <Hero />
       <Wrapper>
-        <LeftPanel />
+        <LeftPanel activePage={active} />
 
         <MainContent>
-          <h1>Documentation</h1>
-
-          <div>Buttons: 1 2 3</div>
-
-          <div>Carousels: 1 2 3</div>
-
-          <div>Not Founds: 1 2 3</div>
+          {props.children}
         </MainContent>
 
       </Wrapper>
