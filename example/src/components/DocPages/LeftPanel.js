@@ -38,7 +38,8 @@ const LeftPanel = ({activePage}) => {
   const [isOpen, setIsOpen] = useState({
     buttons: false, 
     carousels: false, 
-    not_founds: false
+    not_founds: false,
+    images: false
   });
   useEffect(()=>{
 
@@ -85,6 +86,17 @@ const LeftPanel = ({activePage}) => {
         }
         <Link to="/docs/not-founds" data-open="not_founds" onClick={handleOpen}>Not_Founds</Link>
         {isOpen.not_founds 
+          ? 
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+          :
+          (null)
+        }
+        <Link to="/docs/images" data-open="images" onClick={handleOpen}>Images</Link>
+        {isOpen.images 
           ? 
           <ul>
             <li>1</li>

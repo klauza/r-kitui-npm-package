@@ -10,6 +10,7 @@ import Examples from './components/Examples';
 import Buttons from './components/DocPages/Buttons';
 import Carousels from './components/DocPages/Carousels';
 import NotFounds from './components/DocPages/NotFounds';
+import Images from './components/DocPages/Images';
 
 import { PageNotFound } from './reactComponentLib';
 
@@ -31,6 +32,7 @@ class App extends Component {
           <Route exact path="/docs/buttons" component={Buttons} />
           <Route exact path="/docs/carousels" component={Carousels} />
           <Route exact path="/docs/not-founds" component={NotFounds} />
+          <Route exact path="/docs/images" component={Images} />
           <Route exact path="/examples" component={Examples} />
           
           <Route component={NotFound} />
