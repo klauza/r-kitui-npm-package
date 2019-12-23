@@ -11,9 +11,14 @@ const Wrapper = styled.div`
 
 const MainContent = styled.div`
   width: auto;
+    margin: 0 auto;
+  .content{
+    width: 50em;
+    max-width: 100%;
+  }
 `;
 
-const Documentation = (props) => {
+const DocReusable = (props) => {
 
   const {active} = props;
 
@@ -24,7 +29,9 @@ const Documentation = (props) => {
         <LeftPanel activePage={active} />
 
         <MainContent>
-          {props.children}
+          <div className="content">
+            {props.children}
+          </div>
         </MainContent>
 
       </Wrapper>
@@ -32,4 +39,4 @@ const Documentation = (props) => {
   )
 }
 
-export default Documentation
+export default DocReusable

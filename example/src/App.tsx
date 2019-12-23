@@ -4,7 +4,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './components/Home';
-import Documentation from './components/Documentation';
+import DocMain from './components/DocPages/DocMain';
 import Examples from './components/Examples';
 // doc pages
 import Buttons from './components/DocPages/Buttons';
@@ -27,7 +27,7 @@ class App extends Component {
       <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/docs" component={Documentation} />
+          <Route exact path="/docs" component={DocMain} />
           <Route exact path="/docs/buttons" component={Buttons} />
           <Route exact path="/docs/carousels" component={Carousels} />
           <Route exact path="/docs/not-founds" component={NotFounds} />
